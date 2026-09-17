@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse all 3D-printable objects by m3tric design.">
+  <title>Models | m3tric design</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="mini-mark" href="index.html" aria-label="m3tric design home">m3tric.</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="models.html" aria-current="page">Models</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="gallery-main">
+    <header class="gallery-head">
+      <div>
+        <p class="section-index">Complete collection</p>
+        <h1>All models.</h1>
+      </div>
+      <div>
+        <p id="gallery-count" class="gallery-count"></p>
+        <p>Browse the full m3tric design catalogue. Select an object to see its details and model link.</p>
+      </div>
+    </header>
+    <section aria-label="All models">
+      <div class="product-grid gallery-grid" id="catalog" data-mode="all"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer compact-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo">m3tric.</p>
+        <p>Independent 3D models for practical, well-organized spaces.</p>
+      </div>
+      <div class="footer-contact">
+        <p class="footer-label">Contact & licensing</p>
+        <a href="mailto:contact@m3tricdesign.com">contact@m3tricdesign.com</a>
+        <p>Poland</p>
+      </div>
+      <nav class="social-links" aria-label="Social links">
+        <a href="https://buymeacoffee.com/m3tricdesign" target="_blank" rel="noopener noreferrer" aria-label="Support m3tric design on Buy Me a Coffee">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h12v7a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5V8Zm12 2h1a3 3 0 0 1 0 6h-1M4 4h14"/></svg>
+          <span>Buy Me a Coffee</span>
+        </a>
+        <a href="https://makerworld.com/@Beniuuu" target="_blank" rel="noopener noreferrer" aria-label="View m3tric design on MakerWorld">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9c-3-3-4-6-4-9s1-6 4-9Z"/></svg>
+          <span>MakerWorld</span>
+        </a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 m3tric design</p>
+      <a href="terms.html">Terms & Privacy</a>
+      <p>Designed to be made.</p>
+    </div>
+  </footer>
+
+  <aside class="detail" id="product-detail" hidden aria-label="Product details">
+    <button class="detail-close" id="detail-close" type="button" aria-label="Close product details">Close <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <div id="detail-inner"></div>
+  </aside>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
