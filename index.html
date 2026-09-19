@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="m3tric design creates functional objects for calm, considered spaces.">
+  <title>m3tric design | functional objects</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="mini-mark" href="#home" aria-label="m3tric design home">m3tric.</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="models.html">Models</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="cursor-grid" aria-hidden="true"></div>
+      <div class="hero-lockup">
+        <h1 id="hero-title" class="sr-only">m3tric design</h1>
+        <img class="hero-logo" src="assets/m3tric-design-logo.png" alt="m3tric design">
+      </div>
+      <a class="scroll-cue" href="#models">Explore models <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg></a>
+    </section>
+
+    <section class="models" id="models" aria-labelledby="models-title">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-index">01 / Selected work</p>
+          <h2 id="models-title">Useful by nature.</h2>
+        </div>
+        <p class="section-intro">Objects made to simplify small daily rituals, clear in purpose and quiet in form.</p>
+      </div>
+      <div class="product-grid" id="catalog" data-mode="featured"></div>
+      <div class="featured-more">
+        <a class="featured-more-link" href="models.html">
+          <span>View all models</span>
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact-panel" id="contact" aria-labelledby="contact-title">
+      <p class="section-index reveal">02 / Contact</p>
+      <div class="contact-grid">
+        <h2 id="contact-title" class="reveal">Need a different licence?</h2>
+        <div class="contact-copy reveal">
+          <p>For commercial use, custom permissions, collaborations or a general question, use the contact page to reach m3tric design by email.</p>
+          <a href="contact.html">Contact m3tric design <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo">m3tric.</p>
+        <p>Independent 3D models for practical, well-organized spaces.</p>
+      </div>
+      <div class="footer-contact">
+        <p class="footer-label">Contact & licensing</p>
+        <a href="mailto:contact@m3tricdesign.com">contact@m3tricdesign.com</a>
+        <p>Poland</p>
+      </div>
+      <nav class="social-links" aria-label="Social links">
+        <a href="https://buymeacoffee.com/m3tricdesign" target="_blank" rel="noopener noreferrer" aria-label="Support m3tric design on Buy Me a Coffee">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h12v7a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5V8Zm12 2h1a3 3 0 0 1 0 6h-1M4 4h14"/></svg>
+          <span>Buy Me a Coffee</span>
+        </a>
+        <a href="https://makerworld.com/@Beniuuu" target="_blank" rel="noopener noreferrer" aria-label="View m3tric design on MakerWorld">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9c-3-3-4-6-4-9s1-6 4-9Z"/></svg>
+          <span>MakerWorld</span>
+        </a>
+        <span class="social-placeholder" aria-label="Instagram link coming soon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          <span>Instagram · soon</span>
+        </span>
+        <span class="social-placeholder" aria-label="Additional social link coming soon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9c-3-3-4-6-4-9s1-6 4-9Z"/></svg>
+          <span>More · soon</span>
+        </span>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 m3tric design</p>
+      <a href="terms.html">Terms & Privacy</a>
+      <p>Designed to be made.</p>
+    </div>
+  </footer>
+
+  <aside class="detail" id="product-detail" hidden aria-label="Product details">
+    <button class="detail-close" id="detail-close" type="button" aria-label="Close product details">Close <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <div id="detail-inner"></div>
+  </aside>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+  <script>
+    (() => {
+      const revealCardsEarly = () => {
+        const cards = document.querySelectorAll('.product-card:not([data-fast-reveal])');
+        cards.forEach((card) => {
+          card.dataset.fastReveal = 'true';
+          const observer = new IntersectionObserver(([entry], obs) => {
+            if (entry.isIntersecting) {
+              card.classList.add('is-visible');
+              obs.disconnect();
+            }
+          }, { rootMargin: '320px 0px 320px 0px', threshold: 0.01 });
+          observer.observe(card);
+        });
+      };
+
+      revealCardsEarly();
+      new MutationObserver(revealCardsEarly).observe(document.getElementById('catalog'), { childList: true, subtree: true });
+    })();
+  </script>
+</body>
+</html>
