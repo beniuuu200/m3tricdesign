@@ -106,10 +106,10 @@ main, .site-footer {
 }
 .hero-logo {
   display: block;
-  height: clamp(62.5px, 8.75vw, 115px);
+  height: clamp(83.3px, 11.67vw, 153.3px);
   object-fit: contain;
   object-position: center;
-  width: min(225px, 21vw);
+  width: min(300px, 28vw);
 }
 .scroll-cue {
   bottom: 2rem;
